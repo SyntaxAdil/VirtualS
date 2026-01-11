@@ -4,7 +4,7 @@ import {communityLinks, platformLinks, resourcesLinks} from "../constants/index"
 export const Footer = () => {
   return (
     <footer className="mt-20 border-t border-neutral-700 ">
-      <div className="container mx-auto px-5 py-10  ">
+      <div className="container mx-auto p-10  max-w-7xl">
         <div className="grid lg:grid-cols-3 grid-cols-2 gap-4 ">
         <div className="lg:w-1/3 w-1/2  mb-4">
           <h4 className="font-medium mb-4 text-xl">Resources</h4>

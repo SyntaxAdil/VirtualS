@@ -4,8 +4,9 @@
 :root{
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
+  
 }
 html{
   scroll-behavior: smooth;
-  scroll-padding: 70px;
+  scroll-padding: 90px;
 }
