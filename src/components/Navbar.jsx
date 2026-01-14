@@ -7,6 +7,18 @@ export const Navbar = () => {
   function toogleMenuBtn() {
     setIsMenuOpen(!isMenuOpen);
   }
+  function scrollHandle(e, targetId) {
+    e.preventDefault();
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      const offTop = targetEl.offsetTop - 80;
+      window.scrollTo({
+        top: offTop,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false);
+  }
   return (
     <nav className="backdrop-blur-md sticky top-0 border-b border-neutral-600 ">
       <div className="container max-w-7xl mx-auto  py-3 flex px-4 justify-between items-center">
@@ -22,7 +34,10 @@ export const Navbar = () => {
               <li key={index}>
                 <a
                   className="text-[14px] font-medium text-white transition-all duration-200 hover:text-orange-400 "
-                  href={navItems.href}
+                  href={`#${navItems.href}`}
+                  onClick={(e) => {
+                    scrollHandle(e, navItems.href);
+                  }}
                 >
                   {navItems.label}
                 </a>
@@ -63,8 +78,11 @@ export const Navbar = () => {
                 return (
                   <li key={index}>
                     <a
-                      href={items.href}
+                      href={`#${items.href}`}
                       className="text-[14px] font-medium text-white transition-all duration-200 hover:text-orange-400 "
+                      onClick={(e) => {
+                        scrollHandle(e, items.href);
+                      }}
                     >
                       {items.label}
                     </a>

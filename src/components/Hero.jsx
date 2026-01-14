@@ -31,7 +31,7 @@ export const Hero = () => {
         </a>
       </div>
 
-      <div className="flex lg:gap-4 px-2 flex-wrap lg:flex-nowrap gap-7 lg:mt-30 my-20">
+      <div className="flex lg:gap-4 px-2 flex-wrap lg:flex-nowrap gap-7 lg:mt-40 my-20">
         <video
           autoPlay
           loop

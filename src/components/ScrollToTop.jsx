@@ -15,7 +15,6 @@ export const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   function scrollToTop() {
-    setIsShowing(false);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
